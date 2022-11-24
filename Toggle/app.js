@@ -28,10 +28,11 @@ function Search(){
 
 function Down(){
 
-    var icon = document.querySelector('.btm i').classList;
+    var icon = document.querySelector('.low').classList;
     var language = document.querySelector('.language')
     var lan = document.querySelector('.lan').classList;
-
+    
+    
     if (lan.contains('d-none')) {
         lan.remove('d-none');
         language.style.opacity = '1' 
@@ -43,4 +44,22 @@ function Down(){
         icon.remove('d-none');
     }
 
+}
+
+
+function UP(){
+    var lan = document.querySelector('.lan').classList;
+    var icon = document.querySelector('.low').classList;
+    var language = document.querySelector('.language')
+
+    if (icon.contains('d-none')) {
+        icon.remove('d-none');
+        language.style.opacity = '0' 
+        lan.add('d-none');
+    }
+    else{
+        icon.add('d-none');
+        language.style.opacity = '1'
+        lan.remove('d-none');
+    }
 }
